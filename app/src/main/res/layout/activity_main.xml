@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:orientation="vertical"
+    app:layout_constraintLeft_toLeftOf="parent"
+    tools:context="com.example.agitatore.trollsms.MainActivity"
+    tools:layout_editor_absoluteY="-41dp">
+
+    <Button
+        android:id="@+id/button_select_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выбери жертву"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Введи СМС сообщение:"/>
+
+    <EditText
+        android:id="@+id/editText_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Текст сообщения"
+        android:inputType="text"
+        android:singleLine="false"
+        tools:text="Сообщение"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Выбери интервал отправки сообщений (сек):"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:max="9"
+            android:progress="1"/>
+
+        <EditText
+            android:id="@+id/editTextPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:text="2.0"
+            tools:text="2.0"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Отложить отправку (сек):"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/seekBarDelay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:max="120"
+            android:progress="0"/>
+
+        <EditText
+            android:id="@+id/editTextDelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:inputType="number"
+            android:text="0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/textView_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Количество СМС для отправки: 0"/>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Послать"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/onSendBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewInfo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            tools:text="SMS text"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Отменить"/>
+    </LinearLayout>
+
+</LinearLayout>
+
